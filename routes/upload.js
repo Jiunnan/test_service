@@ -43,7 +43,7 @@ router.post("/base64ToImageURL", function(req, res) {
                 console.log('image is create.');
                 result.returnMessage = 'image create success'
                 result.returnData = {
-                    imageURL: `http://127.0.0.1:3000/images/${imageName}`
+                    imageURL: `https://test-service-lpak.onrender.com/images/${imageName}`
                 }
                 res.send(result).end();
             } else {
