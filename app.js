@@ -19,6 +19,13 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 
+//CORS的解法
+const cors = require('cors');
+app.use(cors());
+// app.get('/your-endpoint', function(req, res) {
+//   res.json = {message: "CORS enabled"};
+// });
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
