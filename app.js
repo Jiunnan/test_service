@@ -7,6 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var uploadRouter = require('./routes/upload');
+var lineMessageRouter = require('./routes/line_message');
 
 var app = express();
 
@@ -38,6 +39,7 @@ app.use(express.static('public'))
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/upload', uploadRouter);
+app.use('/lineMessage', lineMessageRouter);
 // app.use(uploadRouter.json({limit: '50mb'}));
 // app.use(uploadRouter.urlencoded({limit: "50mb", extended: true, parameterLimit:50000}));
 
